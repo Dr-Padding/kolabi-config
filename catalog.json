@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "models": [
+    {
+      "apiId": "gemini-2.5-flash",
+      "displayName": "Gemini 2.5 Flash",
+      "engineId": "gemini",
+      "isActive": true,
+      "isDefault": true,
+      "sortOrder": 10
+    },
+    {
+      "apiId": "gemini-2.5-flash-lite",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "engineId": "gemini",
+      "isActive": true,
+      "sortOrder": 20
+    },
+    {
+      "apiId": "gemma-4-31b-it",
+      "displayName": "Gemma 4 (31B)",
+      "engineId": "gemini",
+      "isActive": true,
+      "badge": "NEW",
+      "sortOrder": 30
+    },
+    {
+      "apiId": "gemma-4-26b-a4b-it",
+      "displayName": "Gemma 4 (26B A4B)",
+      "engineId": "gemini",
+      "isActive": true,
+      "badge": "NEW",
+      "sortOrder": 40
+    },
+    {
+      "apiId": "openai/gpt-oss-120b",
+      "displayName": "gpt-oss 120B",
+      "engineId": "groq",
+      "isActive": true,
+      "isDefault": true,
+      "badge": "NEW",
+      "sortOrder": 10
+    },
+    {
+      "apiId": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "displayName": "Llama 4 Scout (17Bx16E)",
+      "engineId": "groq",
+      "isActive": true,
+      "badge": "NEW",
+      "sortOrder": 20
+    },
+    {
+      "apiId": "openai/gpt-oss-20b",
+      "displayName": "gpt-oss 20B",
+      "engineId": "groq",
+      "isActive": true,
+      "sortOrder": 30
+    },
+    {
+      "apiId": "openai-gpt4o-mini",
+      "displayName": "GPT-4o mini",
+      "engineId": "openai",
+      "isActive": true,
+      "isDefault": true,
+      "sortOrder": 10
+    },
+    {
+      "apiId": "claude-3-haiku",
+      "displayName": "Claude 3 Haiku",
+      "engineId": "anthropic",
+      "isActive": true,
+      "isDefault": true,
+      "sortOrder": 10
+    },
+    {
+      "apiId": "mistral-small",
+      "displayName": "Mistral Small",
+      "engineId": "mistral",
+      "isActive": true,
+      "isDefault": true,
+      "sortOrder": 10
+    }
+  ],
+  "freeEngineOrder": ["gemini", "groq"],
+  "premiumEngineOrder": ["openai", "anthropic", "mistral"]
+}
