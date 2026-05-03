@@ -1,11 +1,6 @@
 {
   "schemaVersion": 2,
-
   "models": [
-    // =========================
-    // 🟢 FREE ENGINES
-    // =========================
-
     {
       "apiId": "gemini-2.5-flash",
       "displayName": "Gemini 2.5 Flash",
@@ -37,7 +32,6 @@
       "badge": "FAST",
       "sortOrder": 40
     },
-
     {
       "apiId": "openai/gpt-oss-120b",
       "displayName": "gpt-oss 120B",
@@ -63,12 +57,6 @@
       "badge": "FAST",
       "sortOrder": 30
     },
-
-    // =========================
-    // 🔵 PREMIUM (BYOK)
-    // =========================
-
-    // OpenAI
     {
       "apiId": "gpt-4.1",
       "displayName": "GPT-4.1",
@@ -94,8 +82,6 @@
       "badge": "FAST",
       "sortOrder": 30
     },
-
-    // Anthropic
     {
       "apiId": "claude-3-opus",
       "displayName": "Claude 3 Opus",
@@ -121,8 +107,6 @@
       "badge": "FAST",
       "sortOrder": 30
     },
-
-    // Mistral
     {
       "apiId": "mistral-large",
       "displayName": "Mistral Large",
@@ -141,11 +125,6 @@
       "sortOrder": 20
     }
   ],
-
-  // =========================
-  // 🧠 AI DUO PROMPTS (REMOTE CONTROL)
-  // =========================
-
   "aiDuoPrompts": {
     "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
 
@@ -153,11 +132,6 @@
 
     "consensus": "Summarize the best final answer based on both models.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
   },
-
-  // =========================
-  // 🌡️ AI DUO CONFIG (CRITICAL)
-  // =========================
-
   "aiDuoConfig": {
     "modelA": {
       "temperature": 0.5
@@ -169,11 +143,6 @@
       "temperature": 0.2
     }
   },
-
-  // =========================
-  // 📊 ENGINE ORDER
-  // =========================
-
   "freeEngineOrder": ["gemini", "groq"],
   "premiumEngineOrder": ["openai", "anthropic", "mistral"]
 }
