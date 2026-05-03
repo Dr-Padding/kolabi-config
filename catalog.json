@@ -1,6 +1,11 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+
   "models": [
+    // =========================
+    // 🟢 FREE ENGINES
+    // =========================
+
     {
       "apiId": "gemini-2.5-flash",
       "displayName": "Gemini 2.5 Flash",
@@ -21,7 +26,7 @@
       "displayName": "Gemma 4 (31B)",
       "engineId": "gemini",
       "isActive": true,
-      "badge": "NEW",
+      "badge": "BEST",
       "sortOrder": 30
     },
     {
@@ -29,21 +34,22 @@
       "displayName": "Gemma 4 (26B A4B)",
       "engineId": "gemini",
       "isActive": true,
-      "badge": "NEW",
+      "badge": "FAST",
       "sortOrder": 40
     },
+
     {
       "apiId": "openai/gpt-oss-120b",
       "displayName": "gpt-oss 120B",
       "engineId": "groq",
       "isActive": true,
       "isDefault": true,
-      "badge": "NEW",
+      "badge": "BEST",
       "sortOrder": 10
     },
     {
       "apiId": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "displayName": "Llama 4 Scout (17Bx16E)",
+      "displayName": "Llama 4 Scout",
       "engineId": "groq",
       "isActive": true,
       "badge": "NEW",
@@ -54,29 +60,49 @@
       "displayName": "gpt-oss 20B",
       "engineId": "groq",
       "isActive": true,
+      "badge": "FAST",
       "sortOrder": 30
     },
+
+    // =========================
+    // 🔵 PREMIUM (BYOK)
+    // =========================
+
+    // OpenAI
     {
-      "apiId": "openai-gpt4o",
+      "apiId": "gpt-4.1",
+      "displayName": "GPT-4.1",
+      "engineId": "openai",
+      "isActive": true,
+      "badge": "SMART",
+      "sortOrder": 10
+    },
+    {
+      "apiId": "gpt-4o",
       "displayName": "GPT-4o",
       "engineId": "openai",
       "isActive": true,
       "isDefault": true,
-      "sortOrder": 10
+      "badge": "BALANCED",
+      "sortOrder": 20
     },
     {
-      "apiId": "openai-gpt4o-mini",
+      "apiId": "gpt-4o-mini",
       "displayName": "GPT-4o mini",
       "engineId": "openai",
       "isActive": true,
-      "sortOrder": 20
+      "badge": "FAST",
+      "sortOrder": 30
     },
+
+    // Anthropic
     {
       "apiId": "claude-3-opus",
       "displayName": "Claude 3 Opus",
       "engineId": "anthropic",
       "isActive": true,
       "isDefault": true,
+      "badge": "BEST",
       "sortOrder": 10
     },
     {
@@ -84,6 +110,7 @@
       "displayName": "Claude 3 Sonnet",
       "engineId": "anthropic",
       "isActive": true,
+      "badge": "BALANCED",
       "sortOrder": 20
     },
     {
@@ -91,24 +118,62 @@
       "displayName": "Claude 3 Haiku",
       "engineId": "anthropic",
       "isActive": true,
+      "badge": "FAST",
       "sortOrder": 30
+    },
+
+    // Mistral
+    {
+      "apiId": "mistral-large",
+      "displayName": "Mistral Large",
+      "engineId": "mistral",
+      "isActive": true,
+      "isDefault": true,
+      "badge": "SMART",
+      "sortOrder": 10
     },
     {
       "apiId": "mistral-small",
       "displayName": "Mistral Small",
       "engineId": "mistral",
       "isActive": true,
-      "isDefault": true,
-      "sortOrder": 10
-    },
-    {
-      "apiId": "mistral-large",
-      "displayName": "Mistral Large",
-      "engineId": "mistral",
-      "isActive": true,
+      "badge": "FAST",
       "sortOrder": 20
     }
   ],
+
+  // =========================
+  // 🧠 AI DUO PROMPTS (REMOTE CONTROL)
+  // =========================
+
+  "aiDuoPrompts": {
+    "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
+
+    "modelBReview": "You are Model B. Critically review the answer.\n\n- Identify factual errors\n- Point out missing steps\n- Improve reasoning\n- Do NOT agree blindly\n\nOriginal question:\n{originalPrompt}\n\nAnswer to review:\n{currentAnswer}\n\nProvide a better version:",
+
+    "consensus": "Summarize the best final answer based on both models.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
+  },
+
+  // =========================
+  // 🌡️ AI DUO CONFIG (CRITICAL)
+  // =========================
+
+  "aiDuoConfig": {
+    "modelA": {
+      "temperature": 0.5
+    },
+    "modelB": {
+      "temperature": 0.3
+    },
+    "consensus": {
+      "temperature": 0.2
+    }
+  },
+
+  // =========================
+  // 📊 ENGINE ORDER
+  // =========================
+
   "freeEngineOrder": ["gemini", "groq"],
   "premiumEngineOrder": ["openai", "anthropic", "mistral"]
 }
