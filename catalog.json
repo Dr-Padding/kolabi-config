@@ -33,29 +33,45 @@
       "sortOrder": 40
     },
     {
-      "apiId": "openai/gpt-oss-120b",
-      "displayName": "gpt-oss 120B",
+      "apiId": "llama-3.1-8b-instant",
+      "displayName": "Llama 3.1 8B Instant",
       "engineId": "groq",
       "isActive": true,
-      "isDefault": true,
-      "badge": "BEST",
+      "badge": "FAST",
       "sortOrder": 10
+    },
+    {
+      "apiId": "llama-3.3-70b-versatile",
+      "displayName": "Llama 3.3 70B Versatile",
+      "engineId": "groq",
+      "isActive": true,
+      "sortOrder": 20
     },
     {
       "apiId": "meta-llama/llama-4-scout-17b-16e-instruct",
       "displayName": "Llama 4 Scout",
       "engineId": "groq",
       "isActive": true,
+      "isDefault": true,
       "badge": "NEW",
-      "sortOrder": 20
+      "sortOrder": 30
+    },
+    {
+      "apiId": "openai/gpt-oss-120b",
+      "displayName": "gpt-oss 120B",
+      "engineId": "openai-oss",
+      "isActive": true,
+      "isDefault": true,
+      "badge": "BEST",
+      "sortOrder": 10
     },
     {
       "apiId": "openai/gpt-oss-20b",
       "displayName": "gpt-oss 20B",
-      "engineId": "groq",
+      "engineId": "openai-oss",
       "isActive": true,
       "badge": "FAST",
-      "sortOrder": 30
+      "sortOrder": 20
     },
     {
       "apiId": "gpt-4.1",
@@ -127,9 +143,7 @@
   ],
   "aiDuoPrompts": {
     "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
-
     "modelBReview": "You are Model B. Critically review the answer.\n\n- Identify factual errors\n- Point out missing steps\n- Improve reasoning\n- Do NOT agree blindly\n\nOriginal question:\n{originalPrompt}\n\nAnswer to review:\n{currentAnswer}\n\nProvide a better version:",
-
     "consensus": "Summarize the best final answer based on both models.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
   },
   "aiDuoConfig": {
@@ -143,6 +157,6 @@
       "temperature": 0.2
     }
   },
-  "freeEngineOrder": ["gemini", "groq"],
+  "freeEngineOrder": ["gemini", "groq", "openai-oss"],
   "premiumEngineOrder": ["openai", "anthropic", "mistral"]
 }
