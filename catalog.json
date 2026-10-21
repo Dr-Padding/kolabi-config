@@ -2,25 +2,27 @@
   "schemaVersion": 2,
   "models": [
     {
-      "apiId": "gemini-2.5-flash",
-      "displayName": "Gemini 2.5 Flash",
+      "apiId": "gemini-3.8-flash",
+      "displayName": "Gemini 3.8 Flash",
       "engineId": "gemini",
       "isActive": true,
       "isDefault": true,
+      "badge": "SMART",
       "sortOrder": 10
     },
     {
-      "apiId": "gemini-2.5-flash-lite",
-      "displayName": "Gemini 2.5 Flash-Lite",
+      "apiId": "gemini-3.5-flash-lite",
+      "displayName": "Gemini 3.5 Flash-Lite",
       "engineId": "gemini",
       "isActive": true,
+      "badge": "FAST",
       "sortOrder": 20
     },
     {
       "apiId": "gemma-4-31b-it",
       "displayName": "Gemma 4 (31B)",
       "engineId": "gemini",
-      "isActive": true,
+      "isActive": false,
       "badge": "BEST",
       "sortOrder": 30
     },
@@ -29,32 +31,17 @@
       "displayName": "Gemma 4 (26B A4B)",
       "engineId": "gemini",
       "isActive": true,
-      "badge": "FAST",
+      "badge": "BALANCED",
       "sortOrder": 40
     },
     {
-      "apiId": "llama-3.1-8b-instant",
-      "displayName": "Llama 3.1 8B Instant",
-      "engineId": "groq",
-      "isActive": true,
-      "badge": "FAST",
-      "sortOrder": 10
-    },
-    {
-      "apiId": "llama-3.3-70b-versatile",
-      "displayName": "Llama 3.3 70B Versatile",
-      "engineId": "groq",
-      "isActive": true,
-      "sortOrder": 20
-    },
-    {
-      "apiId": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "displayName": "Llama 4 Scout",
+      "apiId": "qwen/qwen3.8-27b",
+      "displayName": "Qwen 3.8 27B",
       "engineId": "groq",
       "isActive": true,
       "isDefault": true,
       "badge": "NEW",
-      "sortOrder": 30
+      "sortOrder": 10
     },
     {
       "apiId": "openai/gpt-oss-120b",
@@ -74,71 +61,79 @@
       "sortOrder": 20
     },
     {
-      "apiId": "gpt-4.1",
-      "displayName": "GPT-4.1",
+      "apiId": "gpt-6-astra",
+      "displayName": "GPT-6 Astra",
       "engineId": "openai",
       "isActive": true,
-      "badge": "SMART",
-      "sortOrder": 10
-    },
-    {
-      "apiId": "gpt-4o",
-      "displayName": "GPT-4o",
-      "engineId": "openai",
-      "isActive": true,
-      "isDefault": true,
-      "badge": "BALANCED",
-      "sortOrder": 20
-    },
-    {
-      "apiId": "gpt-4o-mini",
-      "displayName": "GPT-4o mini",
-      "engineId": "openai",
-      "isActive": true,
-      "badge": "FAST",
-      "sortOrder": 30
-    },
-    {
-      "apiId": "claude-3-opus",
-      "displayName": "Claude 3 Opus",
-      "engineId": "anthropic",
-      "isActive": true,
-      "isDefault": true,
       "badge": "BEST",
       "sortOrder": 10
     },
     {
-      "apiId": "claude-3-sonnet",
-      "displayName": "Claude 3 Sonnet",
-      "engineId": "anthropic",
+      "apiId": "gpt-6.1-sol",
+      "displayName": "GPT-6.1 Sol",
+      "engineId": "openai",
       "isActive": true,
+      "isDefault": true,
       "badge": "BALANCED",
       "sortOrder": 20
     },
     {
-      "apiId": "claude-3-haiku",
-      "displayName": "Claude 3 Haiku",
+      "apiId": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "engineId": "openai",
+      "isActive": true,
+      "badge": "FAST",
+      "sortOrder": 30
+    },
+    {
+      "apiId": "claude-opus-4-6",
+      "displayName": "Claude Opus 4.6",
+      "engineId": "anthropic",
+      "isActive": true,
+      "badge": "BEST",
+      "sortOrder": 10
+    },
+    {
+      "apiId": "claude-sonnet-4-6",
+      "displayName": "Claude Sonnet 4.6",
+      "engineId": "anthropic",
+      "isActive": true,
+      "isDefault": true,
+      "badge": "BALANCED",
+      "sortOrder": 20
+    },
+    {
+      "apiId": "claude-haiku-4-5-20251001",
+      "displayName": "Claude Haiku 4.5",
       "engineId": "anthropic",
       "isActive": true,
       "badge": "FAST",
       "sortOrder": 30
     },
     {
-      "apiId": "mistral-large",
-      "displayName": "Mistral Large",
+      "apiId": "mistral-medium-3-5",
+      "displayName": "Mistral Medium 3.5",
       "engineId": "mistral",
       "isActive": true,
-      "isDefault": true,
       "badge": "SMART",
       "sortOrder": 10
     },
     {
-      "apiId": "mistral-small",
-      "displayName": "Mistral Small",
+      "apiId": "ministral-14b-2512",
+      "displayName": "Ministral 3 14B",
+      "engineId": "mistral",
+      "isActive": true,
+      "isDefault": true,
+      "badge": "BALANCED",
+      "sortOrder": 20
+    },
+    {
+      "apiId": "mistral-small-2603",
+      "displayName": "Mistral Small 4",
       "engineId": "mistral",
       "isActive": true,
       "badge": "FAST",
-      "sortOrder": 20
+      "sortOrder": 30
     }
   ],
   "aiDuoPrompts": {
@@ -157,6 +152,14 @@
       "temperature": 0.2
     }
   },
-  "freeEngineOrder": ["gemini", "groq", "openai-oss"],
-  "premiumEngineOrder": ["openai", "anthropic", "mistral"]
+  "freeEngineOrder": [
+    "gemini",
+    "groq",
+    "openai-oss"
+  ],
+  "premiumEngineOrder": [
+    "openai",
+    "anthropic",
+    "mistral"
+  ]
 }
