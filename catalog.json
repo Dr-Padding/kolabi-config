@@ -6,15 +6,16 @@
       "displayName": "Gemini 3.8 Flash",
       "engineId": "gemini",
       "isActive": true,
-      "isDefault": true,
       "badge": "SMART",
-      "sortOrder": 10
+      "sortOrder": 10,
+      "fallbackApiId": "gemini-3.5-flash-lite"
     },
     {
       "apiId": "gemini-3.5-flash-lite",
       "displayName": "Gemini 3.5 Flash-Lite",
       "engineId": "gemini",
       "isActive": true,
+      "isDefault": true,
       "badge": "FAST",
       "sortOrder": 20
     },
@@ -111,8 +112,8 @@
       "sortOrder": 30
     },
     {
-      "apiId": "mistral-medium-3-5",
-      "displayName": "Mistral Medium 3.5",
+      "apiId": "mistral-large-4",
+      "displayName": "Mistral Large 4",
       "engineId": "mistral",
       "isActive": true,
       "badge": "SMART",
