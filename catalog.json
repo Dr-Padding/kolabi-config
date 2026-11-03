@@ -138,9 +138,9 @@
     }
   ],
   "aiDuoPrompts": {
-    "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
-    "modelBReview": "You are Model B. Critically review the answer.\n\n- Identify factual errors\n- Point out missing steps\n- Improve reasoning\n- Do NOT agree blindly\n\nOriginal question:\n{originalPrompt}\n\nAnswer to review:\n{currentAnswer}\n\nProvide a better version:",
-    "consensus": "Summarize the best final answer based on both models.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
+    "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
+    "modelBReview": "You are Model B. Critically review the answer. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\n- Identify factual errors\n- Point out missing steps\n- Improve reasoning\n- Do NOT agree blindly\n\nOriginal question:\n{originalPrompt}\n\nAnswer to review:\n{currentAnswer}\n\nProvide a better version:",
+    "consensus": "Summarize the best final answer based on both models. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
   },
   "aiDuoConfig": {
     "modelA": {
