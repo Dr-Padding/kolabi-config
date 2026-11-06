@@ -140,7 +140,9 @@
   "aiDuoPrompts": {
     "modelARefinement": "You are Model A. Improve the answer using feedback. Be precise, logical, and correct. Fix all mistakes and avoid vague statements. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\nOriginal question:\n{originalPrompt}\n\nPrevious answer:\n{previousAnswer}\n\nPeer feedback:\n{feedback}\n\nDeliver a significantly improved response:",
     "modelBReview": "You are Model B. Critically review the answer. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\n- Identify factual errors\n- Point out missing steps\n- Improve reasoning\n- Do NOT agree blindly\n\nOriginal question:\n{originalPrompt}\n\nAnswer to review:\n{currentAnswer}\n\nProvide a better version:",
-    "consensus": "Summarize the best final answer based on both models. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:"
+    "consensus": "Summarize the best final answer based on both models. Always write your entire reply in the same language as the Original question. Do not mix languages.\n\n- Keep it concise\n- Keep it correct\n- Remove redundancy\n\nOriginal question:\n{originalPrompt}\n\nFinal shared reasoning:\n{latestAnswer}\n\nProvide the final answer:",
+    "debateCritique": "You are Model {selfLabel} in a two-model debate. Both models answered the question independently.\nAlways write your entire reply in the same language as the Original question. Do not mix languages.\n\nOriginal question: {originalPrompt}\n\nYour answer: {ownAnswer}\n\nThe other model's answer: {peerAnswer}\n\n1. Critique the other model's answer: factual errors, missing steps, weak reasoning. Do not agree blindly.\n2. Admit any weaknesses in your own answer that the comparison reveals.\n3. Give your revised, concise answer.\nFinish with exactly one line: POSITION: AGREE (if you and the other model reach the same core conclusion) or POSITION: DISAGREE.",
+    "debateVerdict": "You are the judge of a two-model debate. Compare both final positions and critiques.\nAlways write your entire reply in the same language as the Original question. Do not mix languages.\n\nOriginal question: {originalPrompt}\n\nModel A final position: {answerA}\n\nModel B final position: {answerB}\n\nModel A's critique of B: {critiqueA}\n\nModel B's critique of A: {critiqueB}\n\nStart your reply with exactly these two lines:\nVERDICT: AGREE | PARTIAL | DISAGREE\nCONFIDENCE: <integer 0-100, how confident you are in the final answer>\nThen write: the points both models agree on, the points they disagree on (if any) and which side is better supported, and the final concise answer."
   },
   "aiDuoConfig": {
     "modelA": {
@@ -165,16 +167,16 @@
   ],
   "app": {
     "android": {
-      "latestVersionCode": 8,
+      "latestVersionCode": 9,
       "storeUrl": "https://play.google.com/store/apps/details?id=com.kolabi.mobile"
     },
     "ios": {
-      "latestBuild": 10,
+      "latestBuild": 11,
       "storeUrl": "https://apps.apple.com/app/id6760977115"
     },
     "whatsNew": {
-      "en": "Kolabi 1.0.6: AI Duo now answers in the same language you write in, plus a hotfix so free models and AI Duo work reliably again.",
-      "ru": "Kolabi 1.0.6: AI Duo теперь отвечает на том же языке, на котором вы пишете, плюс исправление — бесплатные модели и AI Duo снова работают стабильно."
+      "en": "Kolabi 1.0.7: AI Duo Debate — two models answer independently, critique each other, then a verdict with confidence. Smoother typing animation. Ocean hidden until ready.",
+      "ru": "Kolabi 1.0.7: AI Duo Debate — две модели отвечают независимо, критикуют друг друга и дают вердикт с уверенностью. Плавнее анимация набора. Ocean скрыт до готовности."
     }
   }
 }
