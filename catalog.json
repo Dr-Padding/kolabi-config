@@ -23,7 +23,7 @@
       "apiId": "gemma-4-31b-it",
       "displayName": "Gemma 4 (31B)",
       "engineId": "gemini",
-      "isActive": false,
+      "isActive": true,
       "badge": "BEST",
       "sortOrder": 30
     },
@@ -31,7 +31,7 @@
       "apiId": "gemma-4-26b-a4b-it",
       "displayName": "Gemma 4 (26B A4B)",
       "engineId": "gemini",
-      "isActive": true,
+      "isActive": false,
       "badge": "BALANCED",
       "sortOrder": 40
     },
